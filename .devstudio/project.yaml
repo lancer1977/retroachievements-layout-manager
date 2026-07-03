@@ -1,0 +1,25 @@
+schema: 1
+project:
+  name: retroachievements-layout-manager
+  kind: legacy-windows-desktop-tool
+  owner: lancer1977
+  languages:
+    - csharp
+    - xml
+  frameworks:
+    - dotnet-framework-4.7.2
+    - windows-forms
+    - clickonce
+    - webview2
+    - retroachievements-api
+validation:
+  validate: bash scripts/validate.sh
+  scope:
+    - XML, project, config, and resource file parsing
+    - Structural validation for legacy Windows desktop project files
+tracking:
+  primary: repo-state
+  repo-state: repo-state.md
+docs:
+  index: docs/index.md
+  validation: docs/validation.md

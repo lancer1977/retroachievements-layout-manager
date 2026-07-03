@@ -231,3 +231,26 @@ Text files are generated in the `stream-labels` folder. There are individual fil
    "retroRatio":"3.27%"
 }
 ```
+
+## Repository Shape
+
+- `README.md` - repository entry point.
+- `repo-state.md` - compact current-state mirror.
+- `docs/index.md` - stable documentation index.
+- `docs/validation.md` - validation notes.
+- `scripts/validate.sh` - repo-native project validation.
+- `.github/workflows/ci.yml` - CI entrypoint.
+- `.devstudio/project.yaml` - Dev Studio project metadata.
+- `repo-state.md` - tracked state snapshot used by the steward loop.
+
+## Validation
+
+```bash
+bash scripts/validate.sh
+```
+
+## Documentation
+
+- [Docs Index](docs/index.md)
+- [Repo State](repo-state.md)
+- [Validation](docs/validation.md)
