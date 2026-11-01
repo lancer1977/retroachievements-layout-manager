@@ -1,0 +1,31 @@
+schema_version: 2
+merge_policy:
+  integration_branch: master
+  protected_branch: master
+  required_checks: []
+  test_tiers:
+    unit:
+      command: null
+      required_for: []
+      gap: "none in CI"
+    integration:
+      command: null
+      required_for: []
+      gap: "none in CI"
+    automation:
+      command: bash scripts/validate.sh
+      required_for: []
+      ci_job: validate
+    smoke:
+      command: null
+      required_for: []
+      gap: "none in CI"
+  escalate_paths:
+    - "**/*secret*"
+    - "**/*credential*"
+    - "**/*auth*"
+    - ".github/workflows/**"
+    - "**/*.config"
+    - "**/App.config"
+  escalate_labels:
+    - bug
